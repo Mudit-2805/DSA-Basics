@@ -13,5 +13,7 @@ def fib(n, a, b):
             a = b
             b = j    
             i += 1
+    else:
+        print("Invalid Input")
 
 fib(n, a, b)
