@@ -3,14 +3,14 @@
 int Binary_Search(int a[], int l, int h, int x){
 
     if(l > h){ 
-        printf("It does not exist");
+        printf("Element does not exist.");
         return 0;
     }
 
     int mid = (l + h)/2;
 
     if(x == a[mid]){
-        printf("It exists");
+        printf("Element exists");
     } else if(x > a[mid]){
         Binary_Search(a, mid+1, h, x);
     } else if(x < a[mid]){
