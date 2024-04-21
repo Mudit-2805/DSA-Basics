@@ -9,7 +9,7 @@ def Binary_Search(L, l, h, x):
     mid = (l+h)//2
     
     if x == L[mid]:
-        print("Element Exists.")
+        print("Element exists.")
     elif x > L[mid]:
         Binary_Search(L, mid+1, h, x)
     else:
