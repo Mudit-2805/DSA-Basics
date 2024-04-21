@@ -1,20 +1,20 @@
 #include <stdio.h>
 
-int Binary_Search(int a[], int l, int h, int x){
+int Binary_Search(int a[], int low, int high, int x){
 
-    if(l > h){ 
+    if(low > high){ 
         printf("Element does not exist.");
         return 0;
     }
 
-    int mid = (l + h)/2;
+    int mid = (low + high)/2;
 
     if(x == a[mid]){
         printf("Element exists");
     } else if(x > a[mid]){
-        Binary_Search(a, mid+1, h, x);
+        Binary_Search(a, mid+1, high, x);
     } else if(x < a[mid]){
-        Binary_Search(a, l, mid-1, x);
+        Binary_Search(a, low, mid-1, x);
     }
 
     return 0;
